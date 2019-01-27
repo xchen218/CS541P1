@@ -34,8 +34,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Example of a call to a native method
-        TextView tv = (TextView) findViewById(R.id.sample_text);
-        tv.setText(stringFromJNI());
+        //TextView tv = (TextView) findViewById(R.id.sample_text1);
+        //tv.setText(stringFromJNI()); this function calls string from jni in hellojni.java
+        //and change the text into the given string in the function definition
     }
 
     @Override
