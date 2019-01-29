@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,13 +29,20 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Temporarily there is no certain action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Snackbar.make(view, "Click the button in the right to see the answer", Snackbar.LENGTH_LONG)
+                        .setAction("Answer", new View.OnClickListener(){
+                            @Override
+                            public void onClick(View v){
+                                Toast.makeText(MainActivity.this, "Answer: I install all the SDK in disk D.", Toast.LENGTH_SHORT).show();
+                            }
+                        }).show();
             }
         });
 
+
+
         // Example of a call to a native method
-        //TextView tv = (TextView) findViewById(R.id.sample_text1);
+        //TextView tv = (TextView) findViewById(R.id.sample_text);
         //tv.setText(stringFromJNI()); this function calls string from jni in hellojni.java
         //and change the text into the given string in the function definition
     }
@@ -65,5 +73,5 @@ public class MainActivity extends AppCompatActivity {
      * A native method that is implemented by the 'native-lib' native library,
      * which is packaged with this application.
      */
-    public native String stringFromJNI();
+    //public native String stringFromJNI();
 }
