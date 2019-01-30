@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Answer", new View.OnClickListener(){
                             @Override
                             public void onClick(View v){
-                                Toast.makeText(MainActivity.this, "Answer: I install all the SDK in disk D.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainActivity.this, "Answer: I install the SDK in disk D.", Toast.LENGTH_SHORT).show();
                             }
                         }).show();
             }
